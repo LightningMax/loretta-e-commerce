@@ -61,7 +61,7 @@
     </header>
     <div class="container-login flex w-full h-screen bg-cover">
       <div class="flex flex-1 items-center justify-center">
-        <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+        <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8" id="login">
           <div class="sm:mx-auto sm:w-full sm:max-w-sm">
             <h2
               class="mt-10 text-center text-4xl font-bold tracking-tight text-gray-900"
@@ -106,18 +106,111 @@
                   Se connecter
                 </button>
               </div>
-              <div class="flex items-center justify-center">
-                <div class="text-sm">
+              <div class="flex items-center justify-start">
+                <div class="text-sm flex gap-2">
+                  <a
+                    href="#"
+                    class="font-semibold text-gray-900 hover:text-gray-400 mb-2"
+                    >Mot de passe oublié ?</a
+                  >
                   <a
                     href="#"
                     class="font-semibold text-gray-900 hover:text-gray-400"
-                    >Mot de passe oublié ?</a
+                    id="sign-in-btn"
+                    >S'enregistrer</a
                   >
                 </div>
               </div>
             </form>
           </div>
         </div>
+        <div class="hidden min-h-full flex-col justify-center px-6 py-12 lg:px-8" id="sign-in">
+          <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+            <h2
+              class="mt-10 text-center text-4xl font-bold tracking-tight text-gray-900"
+            >
+              S'enregistrer
+            </h2>
+          </div>
+
+          <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            <form class="space-y-6" action="#" method="POST">
+              <div>
+                <div class="mt-2">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Nom"
+                    required
+                    class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  />
+                </div>
+                <div class="mt-2">
+                  <input
+                    type="text"
+                    name="prenom"
+                    id="name"
+                    placeholder="Prenom"
+                    required
+                    class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  />
+                </div>
+                <div class="mt-2">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    autocomplete="email"
+                    placeholder="Email"
+                    required
+                    class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  />
+                </div>
+              </div>
+              <div>
+                <div class="mt-2">
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    autocomplete="current-password"
+                    placeholder="Mot de passe"
+                    class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="flex w-full justify-center rounded-md bg-gray-900 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  S'enregistrer
+                </button>
+              </div>
+              <div class="flex items-center justify-start">
+                <div class="text-sm flex gap-2">
+                  <a
+                    href="#"
+                    class="font-semibold text-gray-900 hover:text-gray-400 mb-2"
+                    >Mot de passe oublié ?</a
+                  >
+                  <a
+                    href="#"
+                    class="font-semibold text-gray-900 hover:text-gray-400"
+                    id="login-btn"
+                    >Se connecter</a
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+
+
+
       </div>
       <img
         class="flex justify-center"
@@ -125,5 +218,6 @@
         alt=""
       />
     </div>
+    <script src="../scripts/sign-in.js"></script>
   </body>
 </html>
