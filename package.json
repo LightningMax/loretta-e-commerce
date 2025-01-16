@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/styles.css --watch",
-    "build": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/styles.css --minify"
+    "start": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/output.css --watch",
+    "build": "npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/output.css --minify"
   },
   "author": "LightningMax",
   "license": "MIT",
