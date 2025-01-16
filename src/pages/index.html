@@ -8,143 +8,176 @@
     <link rel="stylesheet" href="../styles/styles.css" />
   </head>
   <body class="main-bg h-screen bg-cover bg-center bg-no-repeat">
-      <header class="fixed inset-x-0 top-0 z-50">
-        <nav
-          class="flex items-center justify-between p-6 lg:px-8"
-          aria-label="Global"
-        >
-          <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
-              <img
-                class="h-8 w-auto"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
+    <header class="fixed inset-x-0 top-0 z-50">
+      <nav
+        class="flex items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img
+              class="h-8 w-auto"
+              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="size-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
               />
-            </a>
-          </div>
-          <div class="flex lg:hidden">
-            <button
-              type="button"
-              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            >
-              <span class="sr-only">Open main menu</span>
-              <svg
-                class="size-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#" class="text-sm/6 font-semibold text-gray-50">Accueil</a>
-            <a href="#categories" class="text-sm/6 font-semibold text-gray-50"
-              >Catégories</a
-            >
-            <a href="#" class="text-sm/6 font-semibold text-gray-50"
-              >Types de produits</a
-            >
-          </div>
-          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="../pages/login.html"
-              class="text-sm/6 font-semibold text-gray-50"
-              >Se connecter<span aria-hidden="true">&rarr;</span></a
-            >
-          </div>
-        </nav>
-      </header>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="#" class="text-sm/6 font-semibold text-gray-50">Accueil</a>
+          <a href="#categories" class="text-sm/6 font-semibold text-gray-50"
+            >Catégories</a
+          >
+          <a href="#" class="text-sm/6 font-semibold text-gray-50"
+            >Types de produits</a
+          >
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="../pages/login.html"
+            class="text-sm/6 font-semibold text-gray-50"
+            >Se connecter<span aria-hidden="true">&rarr;</span></a
+          >
+          <a
+            href="../pages/panel.html"
+            class="text-sm/6 font-semibold text-gray-50"
+            >Panier<span aria-hidden="true"></span
+          ></a>
+        </div>
+      </nav>
+    </header>
 
-      <div class="relative isolate px-6 pt-14 lg:px-8">
-        <div
-          class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          aria-hidden="true"
-        ></div>
-        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div class="hidden sm:mb-8 sm:flex sm:justify-center"></div>
-          <div class="text-center">
-            <h1
-              class="text-balance text-5xl font-semibold tracking-tight text-gray-50 sm:text-7xl"
-            >
-              "Adoptez le style, shoppez l'excellence !"
-            </h1>
-            <!-- TODO:
+    <div class="relative isolate px-6 pt-14 lg:px-8">
+      <div
+        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        aria-hidden="true"
+      ></div>
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="hidden sm:mb-8 sm:flex sm:justify-center"></div>
+        <div class="text-center">
+          <h1
+            class="text-balance text-5xl font-semibold tracking-tight text-gray-50 sm:text-7xl"
+          >
+            "Adoptez le style, shoppez l'excellence !"
+          </h1>
+          <!-- TODO:
                       add smooth scroll animation when clicking 
                       in the cta button
             -->
-            <div class="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#categories"
-                class="px-3.5 py-2.5 text-sm font-semibold text-white underline"
-                id="cta"
-                >Commencez a shopper</a
-              >
-            </div>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="#categories"
+              class="px-3.5 py-2.5 text-sm font-semibold text-white underline"
+              id="cta"
+              >Commencez a shopper</a
+            >
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="pt-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" id="categories">
-        <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-          <h2 class="text-2xl font-bold text-gray-900">Notre collection</h2>
-    
-          <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
-            <div class="group relative">
-              <img src="../../assets/images/t-shirt.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square">
-              <h3 class="mt-6 text-sm text-gray-500">
-                <a href="../pages/t-shirts.html">
-                  <span class="absolute inset-0"></span>
-                </a>
-              </h3>
-              <p class="text-base font-semibold text-gray-900">T-shirts</p>
-            </div>
-            <div class="group relative">
-              <img src="../../assets/images/pant.jpg" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square">
-              <h3 class="mt-6 text-sm text-gray-500">
-                <a href="../pages/pants.html">
-                  <span class="absolute inset-0"></span>
-                  
-                </a>
-              </h3>
-              <p class="text-base font-semibold text-gray-900">Pantalons</p>
-            </div>
-            <div class="group relative">
-              <img src="../../assets/images/coat.jpg" alt="Collection of four insulated travel bottles on wooden shelf." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square">
-              <h3 class="mt-6 text-sm text-gray-500">
-                <a href="../pages/coats.html">
-                  <span class="absolute inset-0"></span>
-                </a>
-              </h3>
-              <p class="text-base font-semibold text-gray-900">Manteaux</p>
-            </div>
+    <div class="mx-auto max-w-7xl px-4 pt-10 sm:px-6 lg:px-8" id="categories">
+      <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+        <h2 class="text-2xl font-bold text-gray-900">Notre collection</h2>
+
+        <div
+          class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0"
+        >
+          <div class="group relative">
+            <img
+              src="../../assets/images/t-shirt.jpg"
+              alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+              class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square"
+            />
+            <h3 class="mt-6 text-sm text-gray-500">
+              <a href="../pages/t-shirts.html">
+                <span class="absolute inset-0"></span>
+              </a>
+            </h3>
+            <p class="text-base font-semibold text-gray-900">T-shirts</p>
+          </div>
+          <div class="group relative">
+            <img
+              src="../../assets/images/pant.jpg"
+              alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
+              class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square"
+            />
+            <h3 class="mt-6 text-sm text-gray-500">
+              <a href="../pages/pants.html">
+                <span class="absolute inset-0"></span>
+              </a>
+            </h3>
+            <p class="text-base font-semibold text-gray-900">Pantalons</p>
+          </div>
+          <div class="group relative">
+            <img
+              src="../../assets/images/coat.jpg"
+              alt="Collection of four insulated travel bottles on wooden shelf."
+              class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-[2/1] lg:aspect-square"
+            />
+            <h3 class="mt-6 text-sm text-gray-500">
+              <a href="../pages/coats.html">
+                <span class="absolute inset-0"></span>
+              </a>
+            </h3>
+            <p class="text-base font-semibold text-gray-900">Manteaux</p>
           </div>
         </div>
       </div>
-      
-      
-      <footer class="bg-gray-900 text-white py-4 px-3 mt-16">
-        <div class="container mx-auto flex flex-wrap items-center justify-between">
-            <div class="w-full md:w-1/2 md:text-center md:mb-0 mb-8">
-                <p class="text-xs text-gray-400 md:text-sm">Copyright 2020 &copy; All Rights Reserved</p>
-            </div>
-            <div class="w-full md:w-1/2 md:text-center md:mb-0 mb-8">
-                <ul class="list-reset flex justify-center flex-wrap text-xs md:text-sm gap-3">
-                    <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
-                    <li class="mx-4"><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white">Terms of Use</a></li>
-                </ul>
-            </div>
+    </div>
+
+    <footer class="mt-16 bg-gray-900 px-3 py-4 text-white">
+      <div
+        class="container mx-auto flex flex-wrap items-center justify-between"
+      >
+        <div class="mb-8 w-full md:mb-0 md:w-1/2 md:text-center">
+          <p class="text-xs text-gray-400 md:text-sm">
+            Copyright 2020 &copy; All Rights Reserved
+          </p>
         </div>
+        <div class="mb-8 w-full md:mb-0 md:w-1/2 md:text-center">
+          <ul
+            class="list-reset flex flex-wrap justify-center gap-3 text-xs md:text-sm"
+          >
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+            </li>
+            <li class="mx-4">
+              <a href="#" class="text-gray-400 hover:text-white"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white"
+                >Terms of Use</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
     <script src="../scripts/hero-scroll.js"></script>
   </body>
