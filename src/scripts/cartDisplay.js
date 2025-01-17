@@ -22,7 +22,7 @@ const cartDisplay = () => {
       row.innerHTML = `
                 <td class="py-4">
                     <div class="flex items-center">
-                        <img class="mr-4 h-16 w-16" src="${product.image}" alt="${product.name}">
+                        <img class="mr-4 h-16 w-16 object-cover rounded-md" src="${product.image}" alt="${product.name}">
                         <span class="font-semibold">${product.name}</span>
                     </div>
                 </td>
