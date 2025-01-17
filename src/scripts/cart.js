@@ -22,6 +22,12 @@ const cart = () => {
       localStorage.setItem("cart", JSON.stringify(cart));
       alert("Product added to cart!");
     }
+
+    if (event.target.id === "clear-cart") {
+      localStorage.removeItem("cart");
+      document.getElementById("cart-items").innerHTML = "";
+      document.querySelector(".subtotal").textContent = "$0.00";
+    }
   });
 };
 

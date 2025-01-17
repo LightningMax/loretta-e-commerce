@@ -8,7 +8,7 @@ const cartDisplay = () => {
 
     if (cart.length === 0) {
       cartItemsContainer.innerHTML =
-        "<tr><td colspan='4' class='text-center py-4'>Your cart is empty</td></tr>";
+        "<tr><td colspan='4' class='text-center py-4'>Votre panier est vide</td></tr>";
       return;
     }
 
@@ -26,7 +26,7 @@ const cartDisplay = () => {
                         <span class="font-semibold">${product.name}</span>
                     </div>
                 </td>
-                <td class="py-4">$${product.price.toFixed(2)}</td>
+                <td class="py-4">€${product.price.toFixed(2)}</td>
                 <td class="py-4">
                     <div class="flex items-center">
                         <button class="decrease-qty mr-2 rounded-md border px-4 py-2" data-name="${product.name}">-</button>
@@ -39,9 +39,9 @@ const cartDisplay = () => {
       cartItemsContainer.appendChild(row);
     });
 
-    const grandTotal = (totalPrice + parseFloat(tax)).toFixed(2);
+    const grandTotal = totalPrice.toFixed(2);
     document.querySelector(".subtotal").textContent =
-      `$${totalPrice.toFixed(2)}`;
+      `€${totalPrice.toFixed(2)}`;
   });
 };
 
