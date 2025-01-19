@@ -8,50 +8,7 @@
     <link rel="stylesheet" href="../src/styles/styles.css" />
   </head>
   <body>
-    <header class="absolute inset-x-0 top-0 z-50">
-      <nav
-        class="flex items-center justify-between p-6 lg:px-8"
-        aria-label="Global"
-      >
-        <div class="flex lg:flex-1">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-          </a>
-        </div>
-        <div class="flex lg:hidden">
-          <button
-            type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-          >
-            <span class="">Loretta</span>
-          </button>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-          <a
-            href="../pages/index.html"
-            class="text-sm/6 font-semibold text-gray-900"
-            >Accueil</a
-          >
-          <a href="#" class="text-sm/6 font-semibold text-gray-900"
-            >Catégories</a
-          >
-          <a href="#" class="text-sm/6 font-semibold text-gray-900"
-            >Types de produits</a
-          >
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a
-            href="../pages/login.html"
-            class="text-sm/6 font-semibold text-gray-900"
-            >Se connecter<span aria-hidden="true">&rarr;</span></a
-          >
-          <a
-            href="../pages/panel.html"
-            class="ml-4 text-sm/6 font-semibold text-gray-900"
-            >Panier<span aria-hidden="true"></span
-          ></a>
-        </div>
-      </nav>
+    <header id="navbar" class="fixed inset-x-0 top-0 z-50">
     </header>
 
     <div class="bg-white">
@@ -108,7 +65,7 @@
                     class="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8"
                   >
                     <img
-                      src="../../assets/images/coats/coat1.jpg"
+                      src="/assets/images/coats/coat1.jpg"
                       alt="Two each of gray, white, and black shirts arranged on table."
                       class="aspect-[2/3] w-full rounded-lg bg-gray-100 object-cover sm:col-span-4 lg:col-span-5"
                     />
@@ -143,7 +100,7 @@
                             class="add-to-bag hover:bg-bg-gray-400 mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-900 px-8 py-3 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                             data-name="Manteau orange"
                             data-price="48"
-                            data-image="../../assets/images/coats/coat1.jpg"
+                            data-image="/assets/images/coats/coat1.jpg"
                           >
                             Ajouter au panier
                           </button>
@@ -204,7 +161,7 @@
                     class="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8"
                   >
                     <img
-                      src="../../assets/images/coats/coat2.jpg"
+                      src="/assets/images/coats/coat2.jpg"
                       alt="Two each of gray, white, and black shirts arranged on table."
                       class="aspect-[2/3] w-full rounded-lg bg-gray-100 object-cover sm:col-span-4 lg:col-span-5"
                     />
@@ -239,7 +196,7 @@
                             class="add-to-bag hover:bg-bg-gray-400 mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-900 px-8 py-3 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                             data-name="Manteau vert"
                             data-price="35"
-                            data-image="../../assets/images/coats/coat2.jpg"
+                            data-image="/assets/images/coats/coat2.jpg"
                           >
                             Ajouter au panier
                           </button>
@@ -258,7 +215,7 @@
         >
           <a href="#" class="open-modal group" data-modal="coat-modal-1">
             <img
-              src="../../assets/images/coats/coat1.jpg"
+              src="/assets/images/coats/coat1.jpg"
               alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
               class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
             />
@@ -267,7 +224,7 @@
           </a>
           <a href="#" class="open-modal group" data-modal="coat-modal-2">
             <img
-              src="../../assets/images/coats/coat2.jpg"
+              src="/assets/images/coats/coat2.jpg"
               alt="Olive drab green insulated bottle with flared screw lid and flat top."
               class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
             />
@@ -276,7 +233,7 @@
           </a>
           <a href="#" class="group">
             <img
-              src="../../assets/images/coats/coat3.jpg"
+              src="/assets/images/coats/coat3.jpg"
               alt="Person using a pen to cross a task off a productivity paper card."
               class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
             />
@@ -285,7 +242,7 @@
           </a>
           <a href="#" class="group">
             <img
-              src="../../assets/images/coats/coat4.jpg"
+              src="/assets/images/coats/coat4.jpg"
               alt="Hand holding black machined steel mechanical pencil with brass tip and top."
               class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
             />
@@ -296,7 +253,7 @@
           </a>
           <a href="" class="group">
             <img
-              src="../../assets/images/coats/coat5.jpg"
+              src="/assets/images/coats/coat5.jpg"
               alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
               class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
             />
@@ -305,7 +262,7 @@
           </a>
           <a href="#" class="group">
             <img
-              src="../../assets/images/coats/coat6.jpg"
+              src="/assets/images/coats/coat6.jpg"
               alt="Olive drab green insulated bottle with flared screw lid and flat top."
               class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
             />
@@ -314,7 +271,7 @@
           </a>
           <a href="" class="group">
             <img
-              src="../../assets/images/coats/coat7.jpg"
+              src="/assets/images/coats/coat7.jpg"
               alt="Person using a pen to cross a task off a productivity paper card."
               class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
             />
@@ -323,7 +280,7 @@
           </a>
           <a href="" class="group">
             <img
-              src="../../assets/images/coats/coat8.jpg"
+              src="/assets/images/coats/coat8.jpg"
               alt="Hand holding black machined steel mechanical pencil with brass tip and top."
               class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
             />
@@ -368,6 +325,6 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="../src/scripts/main.js"></script>
+    <script type="module" src="/src/scripts/main.js"></script>
   </body>
 </html>
