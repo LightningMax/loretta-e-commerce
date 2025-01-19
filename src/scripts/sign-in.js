@@ -1,20 +1,24 @@
 const login = document.querySelector("#login");
-const signInBtn = document.querySelector("#sign-in-btn");
-const logInBtn = document.querySelector("#login-btn");
+const signInBtn = document.querySelector("#sign-in-toggle");
+const logInBtn = document.querySelector("#login-toggle");
 const signIn = document.querySelector("#sign-in");
 
-const toogleAuth = () => {
+const toggleAuth = () => {
   signInBtn.onclick = () => {
-    login.classList.toggle("hidden");
-    signIn.classList.toggle("hidden");
+    login.classList.add("hidden");
+    login.classList.remove("flex");
+    
+    signIn.classList.remove("hidden");
     signIn.classList.add("flex");
   };
 
   logInBtn.onclick = () => {
-    login.classList.toggle("hidden");
-    signIn.classList.toggle("hidden");
-    logInBtn.classList.add("flex");
+    signIn.classList.add("hidden");
+    signIn.classList.remove("flex");
+
+    login.classList.remove("hidden");
+    login.classList.add("flex");
   };
 };
 
-export default toogleAuth;
+export default toggleAuth;

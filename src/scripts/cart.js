@@ -23,7 +23,7 @@ const cart = () => {
       }
 
       localStorage.setItem("cart", JSON.stringify(cart));
-      alert("Product added to cart!");
+      alert("Produit ajouté au panier!");
     }
 
     // Clear cart

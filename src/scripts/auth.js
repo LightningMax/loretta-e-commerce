@@ -16,7 +16,7 @@ export const signIn = () => {
 
     localStorage.setItem("user", JSON.stringify(user));
 
-    alert("Vous êtes registré!");
+    alert("Vous êtes enregistré!");
   });
 };
 
@@ -34,10 +34,10 @@ export const logIn = () => {
       storedUser.email === emailInput &&
       storedUser.password === passwordInput
     ) {
-      alert("Login successful!");
-      // Redirect to another page or change UI based on successful login
+      alert("Vous êtes connecté!");
+      window.location.replace("/public/index.html")
     } else {
-      alert("Invalid credentials!");
+      alert("Informations invalides!");
     }
   });
 };
