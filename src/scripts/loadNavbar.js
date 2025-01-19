@@ -10,7 +10,6 @@ const loadNavbar = () => {
       if (page.includes("index.html")) {
         const hrefs = navbar.querySelectorAll("a");
         hrefs.forEach((href) => {
-          console.log(href);
           href.classList.replace("text-gray-900", "text-gray-50");
         });
       }

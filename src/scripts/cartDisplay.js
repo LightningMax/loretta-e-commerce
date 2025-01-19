@@ -45,19 +45,6 @@ const renderCart = () => {
 
   document.querySelector(".subtotal").textContent = `€${totalPrice.toFixed(2)}`;
 
-  document.querySelectorAll(".remove-item").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      const productName = event.target.getAttribute("data-name");
-      removeItemFromCart(productName);
-    });
-  });
-};
-
-const removeItemFromCart = (productName) => {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart = cart.filter((product) => product.name !== productName);
-  localStorage.setItem("cart", JSON.stringify(cart));
-  renderCart();
 };
 
 export default renderCart;
