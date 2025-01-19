@@ -1,7 +1,3 @@
-const cartDisplay = () => {
-  document.addEventListener("DOMContentLoaded", renderCart);
-};
-
 const renderCart = () => {
   const cartItemsContainer = document.getElementById("cart-items");
   if (!cartItemsContainer) return;
@@ -16,7 +12,7 @@ const renderCart = () => {
   }
 
   let totalPrice = 0;
-  cartItemsContainer.innerHTML = ""; // Clear cart before re-rendering
+  cartItemsContainer.innerHTML = "";
 
   cart.forEach((product) => {
     const total = (product.price * product.quantity).toFixed(2);
@@ -40,7 +36,7 @@ const renderCart = () => {
       </td>
       <td class="py-4">€${total}</td>
       <td class="py-4">
-        <button class="remove-item text-red-600" data-name="${product.name}">🗑️</button>
+        <button class="remove-item text-red-600" data-name="${product.name}">x</button>
       </td>
     `;
 
@@ -48,7 +44,7 @@ const renderCart = () => {
   });
 
   document.querySelector(".subtotal").textContent = `€${totalPrice.toFixed(2)}`;
-  
+
   document.querySelectorAll(".remove-item").forEach((button) => {
     button.addEventListener("click", (event) => {
       const productName = event.target.getAttribute("data-name");
@@ -64,4 +60,4 @@ const removeItemFromCart = (productName) => {
   renderCart();
 };
 
-export default cartDisplay;
+export default renderCart;

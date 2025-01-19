@@ -1,7 +1,15 @@
 import cart from "./cart.js";
-import cartDisplay from "./cartDisplay.js";
+import renderCart from "./cartDisplay.js";
 import modal from "./modal.js";
+import loadNavbar from "./loadNavbar.js";
 
-modal();
-cart();
-cartDisplay();
+const App = () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    modal();
+    cart();
+    renderCart();
+    loadNavbar();
+  });
+};
+
+App();
