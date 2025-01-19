@@ -1,4 +1,4 @@
-import renderCart from './cartDisplay.js';
+import renderCart from "./cartDisplay.js";
 
 const cart = () => {
   // Add item to cart

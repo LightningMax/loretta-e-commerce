@@ -29,8 +29,8 @@
                 <div class="mt-2">
                   <input
                     type="email"
-                    name="email"
-                    id="email"
+                    name="login-email"
+                    id="login-email"
                     autocomplete="email"
                     placeholder="Email"
                     required
@@ -42,8 +42,8 @@
                 <div class="">
                   <input
                     type="password"
-                    name="password"
-                    id="password"
+                    name="login-password"
+                    id="login-password"
                     autocomplete="current-password"
                     placeholder="Mot de passe"
                     class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-900 sm:text-sm/6"
@@ -53,6 +53,7 @@
               </div>
               <div>
                 <button
+                  id="login-btn"
                   type="submit"
                   class="flex w-full justify-center rounded-md bg-gray-900 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
                 >
@@ -90,7 +91,7 @@
           </div>
 
           <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form class="" action="#" method="POST">
+            <form id="sign-in" class="" action="#" method="POST">
               <div>
                 <div class="mt-2">
                   <input
@@ -106,7 +107,7 @@
                   <input
                     type="text"
                     name="prenom"
-                    id="name"
+                    id="prenom"
                     placeholder="Prenom"
                     required
                     class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-gray-900 sm:text-sm/6"
@@ -170,8 +171,7 @@
         alt=""
       />
     </div>
-    <footer id="footer" class=" bg-gray-900 px-3 py-4 text-white">
-    </footer>
+    <footer id="footer" class="bg-gray-900 px-3 py-4 text-white"></footer>
     <script type="module" src="/src/scripts/main.js"></script>
   </body>
 </html>

@@ -44,7 +44,6 @@ const renderCart = () => {
   });
 
   document.querySelector(".subtotal").textContent = `€${totalPrice.toFixed(2)}`;
-
 };
 
 export default renderCart;
