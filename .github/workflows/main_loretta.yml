@@ -1,0 +1,84 @@
+name: Build and deploy Node.js app to Azure Web App - loretta
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js version
+
+        uses: actions/setup-node@v3
+
+        with:
+          node-version: "20.x"
+
+      - name: linter, npm install, build, and test
+
+        run: |
+
+          npm install
+        
+          npx prettier . --write --if-present
+
+          npm run build --if-present
+
+          npm run test --if-present
+
+      - name: Zip artifact for deployment
+
+        run: zip release.zip ./* -r
+
+      - name: Upload artifact for deployment job
+
+        uses: actions/upload-artifact@v4
+
+        with:
+          name: node-app
+
+          path: release.zip
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    environment:
+      name: "Production"
+
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    steps:
+      - name: Download artifact from build job
+
+        uses: actions/download-artifact@v4
+
+        with:
+          name: node-app
+
+      - name: Unzip artifact for deployment
+
+        run: unzip release.zip
+
+      - name: "Deploy to Azure Web App"
+
+        id: deploy-to-webapp
+
+        uses: azure/webapps-deploy@v3
+
+        with:
+          app-name: "loretta"
+
+          slot-name: "Production"
+
+          package: .
+
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_26368d1d9ecb41d7b31a7d11d1f6e990 }}
